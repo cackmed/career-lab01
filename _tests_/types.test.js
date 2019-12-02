@@ -18,7 +18,7 @@ describe('validator module', () => {
     it('properly tells if a value is a string', () => {
       expect(isString('hi')).toBeTruthy();
       expect(isString('')).toBeTruthy();
-      expect(isString(3).toBeFalsy());
+      expect(isString(3)).toBeFalsy();
       expect(isString([])).toBeFalsy();
       expect(isString({})).toBeFalsy();
       expect(isString(() => {})).toBeFalsy();
