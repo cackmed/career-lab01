@@ -1,0 +1,24 @@
+{
+  "name": "career-lab01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "test:watch": "npm run test -- --watch",
+    "lint": "eslint '**/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cackmed/career-lab01.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cackmed/career-lab01/issues"
+  },
+  "homepage": "https://github.com/cackmed/career-lab01#readme",
+  "dependencies": {
+    "jest": "^24.9.0"
+  }
+}
