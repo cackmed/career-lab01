@@ -6,7 +6,7 @@ const {
   castToString,
   isBoolean,
   castToBoolean,
-  isArray
+  isArray,
 } = require('../lib/types.js');
     
 describe('validator module', () => {
@@ -44,7 +44,6 @@ describe('validator module', () => {
       expect(isArray({})).toBeFalsy();
       expect(isArray(() => {})).toBeFalsy();
       expect(isArray((true))).toBeFalsy();
-
     });
   });
     
