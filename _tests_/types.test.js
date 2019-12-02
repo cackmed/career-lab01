@@ -7,7 +7,8 @@ const {
   isBoolean,
   castToBoolean,
   isArray,
-  isObject
+  isObject,
+  isFunction
 } = require('../lib/types.js');
     
 describe('validator module', () => {
@@ -52,6 +53,7 @@ describe('validator module', () => {
       expect(isObject('hi')).toBeFalsy();
       expect(isObject(() => {})).toBeFalsy();
       expect(isObject((true))).toBeFalsy();
+      expect(isObject([])).toBeTruthy();
     });
   });
     
