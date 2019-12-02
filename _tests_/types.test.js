@@ -3,7 +3,8 @@ const {
   castToNumber,
   getCaster,
   isString,
-  castToString
+  castToString,
+  isBoolean
 } = require('../lib/types.js');
     
 describe('validator module', () => {
@@ -24,7 +25,15 @@ describe('validator module', () => {
       expect(isString({})).toBeFalsy();
       expect(isString(() => {})).toBeFalsy();
       expect(isString((true))).toBeFalsy();
-
+    });
+    it('properly tells if a vlaue is a boolean', () => {
+      expect(isBoolean(true)).toBeTruthy();
+      expect(isBoolean(false)).toBeTruthy();
+      expect(isBoolean(3)).toBeFalsy();
+      expect(isBoolean('hi')).toBeFalsy();
+      expect(isBoolean([])).toBeFalsy();
+      expect(isBoolean({})).toBeFalsy();
+      expect(isBoolean(() => {})).toBeFalsy();
     });
   });
     
@@ -37,6 +46,8 @@ describe('validator module', () => {
     });
     it('can cast values to a string', () => {
       expect(castToString('hi')).toEqual('hi');
+      expect(castToString('')).toEqual('');
+
     });
     
     it('throws if value is not castable to number', () => {
