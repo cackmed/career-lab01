@@ -5,7 +5,8 @@ const {
   isString,
   castToString,
   isBoolean,
-  castToBoolean
+  castToBoolean,
+  isArray
 } = require('../lib/types.js');
     
 describe('validator module', () => {
@@ -27,7 +28,7 @@ describe('validator module', () => {
       expect(isString(() => {})).toBeFalsy();
       expect(isString((true))).toBeFalsy();
     });
-    it('properly tells if a vlaue is a boolean', () => {
+    it('properly tells if a value is a boolean', () => {
       expect(isBoolean(true)).toBeTruthy();
       expect(isBoolean(false)).toBeTruthy();
       expect(isBoolean(3)).toBeFalsy();
@@ -35,6 +36,15 @@ describe('validator module', () => {
       expect(isBoolean([])).toBeFalsy();
       expect(isBoolean({})).toBeFalsy();
       expect(isBoolean(() => {})).toBeFalsy();
+    });
+    it('properly tells if a value is a array', () => {
+      expect(isArray([])).toBeTruthy();
+      expect(isArray(3)).toBeFalsy();
+      expect(isArray('hi')).toBeFalsy();
+      expect(isArray({})).toBeFalsy();
+      expect(isArray(() => {})).toBeFalsy();
+      expect(isArray((true))).toBeFalsy();
+
     });
   });
     
