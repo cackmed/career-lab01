@@ -1,3 +1,6 @@
 # career-lab01
 
-current branch is Dev
+Current Lab Request https://github.com/cackmed/career-lab01/pull/1
+
+Dev Depndincies:
+    Jest

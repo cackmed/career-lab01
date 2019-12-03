@@ -8,7 +8,7 @@ const {
   castToBoolean,
   isArray,
   isObject,
-  isFunction
+  isFunction,
 } = require('../lib/types.js');
     
 describe('validator module', () => {
