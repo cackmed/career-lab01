@@ -55,6 +55,14 @@ describe('validator module', () => {
       expect(isObject((true))).toBeFalsy();
       expect(isObject([])).toBeTruthy();
     });
+    it('properly tells if a value is a function', () => {
+      expect(isFunction(() => {})).toBeTruthy();
+      expect(isFunction(3)).toBeFalsy();
+      expect(isFunction('hi')).toBeFalsy();
+      expect(isFunction({})).toBeFalsy();
+      expect(isFunction((true))).toBeFalsy();
+      expect(isFunction([])).toBeFalsy();
+    });
   });
     
   describe('casters', () => {
